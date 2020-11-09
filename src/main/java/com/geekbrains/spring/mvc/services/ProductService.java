@@ -11,27 +11,5 @@ import java.util.List;
 @Component
 public class ProductService {
 
-    private ProductRepository productRepository;
-
-    @Autowired
-    public void setProductRepository(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
-
-    public List<Product> getProductList(){
-        return productRepository.getProductList();
-    }
-
-    public void save(Product product) {
-        productRepository.save(product);
-    }
-
-    public void deleteById(long id) {
-        productRepository.deleteById(id);
-    }
-
-    public long getNextId(){
-        return productRepository.getNextId();
-    }
 
 }
